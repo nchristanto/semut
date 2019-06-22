@@ -1,0 +1,9 @@
+{
+  "name": "semut",
+  "version": "1.0.0",
+  "description": "Task Management Platform ",
+  "main": "server.js",
+  "repository": "https://github.com/nchristanto/semut",
+  "author": "nchristanto",
+  "license": "MIT"
+}
