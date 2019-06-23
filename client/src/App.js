@@ -1,20 +1,13 @@
 import React, { Component } from "react";
-import "./App.css";
-import { BrowserRouter as Router } from "react-router-dom";
-import Navbar from "./components/layout/Navbar";
-import Landing from "./components/layout/Landing";
+import Layout from "./components/dashboard/layout";
 
 class App extends Component {
   render() {
     return (
-      <Router>
-        <div className="App">
-          <Navbar />
-          <Landing />
-        </div>
-      </Router>
+      <div>
+        <Layout />
+      </div>
     );
   }
 }
-
 export default App;
