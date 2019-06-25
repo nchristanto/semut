@@ -1,11 +1,11 @@
 import React, { Component } from "react";
-import Layout from "./components/dashboard/layout";
+import Header from "./components/header/header";
 
 class App extends Component {
   render() {
     return (
       <div>
-        <Layout />
+        <Header />
       </div>
     );
   }

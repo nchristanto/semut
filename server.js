@@ -1,22 +1,24 @@
 const express = require("express");
+const cors = require("cors");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const passport = require("passport");
 
-const users = require("./routes/api/users");
+const users = require("./server/routes/api/users");
 
 const app = express();
 
 // Bodyparser middleware
+app.use(bodyParser.json());
+app.use(cors());
 app.use(
   bodyParser.urlencoded({
     extended: false
   })
 );
-app.use(bodyParser.json());
 
 // DB Config
-const db = require("./config/keys").mongoURI;
+const db = require("./server/config/keys").mongoURI;
 
 // Connect to MongoDB
 mongoose
@@ -27,10 +29,10 @@ mongoose
 // Passport middleware
 app.use(passport.initialize());
 // Passport config
-require("./config/passport")(passport);
+require("./server/config/passport")(passport);
 // Routes
-app.use("/api/users", users);
+app.use("./server/routes/api/users", users);
 
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 5004;
 
 app.listen(port, () => console.log(`Server up and running on port ${port} !`));

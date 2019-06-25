@@ -1,0 +1,19 @@
+.header {
+  background-color: rgb(79, 182, 125);
+  color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16);
+  position: sticky;
+  top: 0;
+  z-index: 2000;
+}
+
+.title-container {
+  height: 5rem;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 1.5rem;
+  letter-spacing: 0.6rem;
+  text-align: center;
+}
